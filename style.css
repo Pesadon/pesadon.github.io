@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    /*height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+    background: url("bg.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+    color: #3c3c2e;
+    text-align: center;
+}
+
+nav {
+    padding-top: 12%;
+    font-family: 'Sacramento', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 5vh;
+}
+
+nav a {
+    margin: 0 2vw;
+    text-decoration: none;
+    color: #3c3c2e;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #5a7f3f;
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 6vw;   /* scales with screen width */
+    color: #3c3c2e;
+    margin: 0 0 4vh 0;
+}
+
+.description {
+    padding-top: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
