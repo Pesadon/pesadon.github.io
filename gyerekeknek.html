@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Foglalkozások gyerekeknek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style/foglalkozasok.css">
+
+</head>
+<body>
+  <!-- Header with Logo -->
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="img/image.png" alt="Mesejó világ Logo" class="logo">
+      </a>
+    </div>
+  </header>
+
+  <!-- Desktop Navigation -->
+    <nav class="navbar-custom">
+      <div class="nav-links">
+        <a href="index.html" class="nav-btn">Főoldal</a>
+        <div class="dropdown nav-item">
+                <a href="#" class="nav-btn dropdown-btn active">
+                    Foglalkozások
+                </a>
+                <div class="dropdown-content">
+                    <a href="#" class="nav-btn">Gyerekeknek</a>
+                    <a href="felnotteknek.html" class="nav-btn">Felnőtteknek</a>
+                </div>
+            </div>
+        <a href="aktualis.html" class="nav-btn">Aktuális</a>
+        <a href="rolam.html" class="nav-btn">Rólam</a>
+        <a href="erdeklodes.html" class="nav-btn">Kapcsolat</a>
+      </div>
+    </nav>
+
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-nav-menu" id="mobileNavMenu">
+      <button class="close-menu" onclick="toggleMobileMenu()">×</button>
+      <a href="#" class="nav-btn" onclick="toggleMobileMenu()">Főoldal</a>
+      <a href="gyerekeknek.html" class="nav-btn" onclick="toggleMobileMenu()">Gyerekeknek</a>
+      <a href="felnotteknek.html" class="nav-btn" onclick="toggleMobileMenu()">Felnőtteknek</a>
+      <a href="rolam.html" class="nav-btn" onclick="toggleMobileMenu()">Rólam</a>
+      <a href="erdeklodes.html" class="nav-btn" onclick="toggleMobileMenu()">Kapcsolat</a>
+      <a href="galeria.html" class="nav-btn" onclick="toggleMobileMenu()">Galéria</a>
+    </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      <h1 class="page-title">Foglalkozások gyerekeknek</h1>
+      
+      <div class="activities-grid">
+        <div class="activity-card" onclick="openModal('mesejo')">
+          <div class="activity-icon"><img src="img/mj.png" alt="" class="mesejo_img"></div>
+          <h3 class="activity-title">Mesejó foglalkozások</h3>
+        </div>
+        
+        <div class="activity-card" onclick="openModal('yoga')">
+          <div class="activity-icon"><img src="img/gyerekjoga.png" alt=""></div>
+          <h3 class="activity-title">Gyerekjóga</h3>
+        </div>
+        
+        <div class="activity-card" onclick="openModal('meseerdo')">
+          <div class="activity-icon"><img src="img/meseerdo.png" alt=""></div>
+          <h3 class="activity-title">MeseErdő séták</h3>
+        </div>
+
+        <div class="activity-card" onclick="openModal('rajz')">
+          <div class="activity-icon"><img src="img/rajz.png" alt=""></div>
+          <h3 class="activity-title">Rajzelemzés</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modals -->
+  <div id="mesejo-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('mesejo')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><img src="img/mj.png" alt="" class="mesejo_img"></div>
+        <h2 class="modal-title">Mesejó foglalkozások</h2>
+      </div>
+      <p class="modal-description">
+        A Mesejó világban a történetek kapukat nyitnak – nemcsak a képzelet világába, hanem a gyerekek belső világához is.
+        A meséken keresztül ismerhetik meg az érzelmeiket, erőforrásaikat, nehézségeiket, és tanulhatják meg, hogyan viszonyuljanak másokhoz elfogadással, empátiával. Továbbá a mesék és az alkotás lehetőséget adnak a stressz és feszültség oldására, a szorongások enyhítésére.
+        A foglalkozások során élőszavas mesemondással hívjuk életre a történeteket, alkotással, mozgással, játékkal dolgozzuk fel az élményt, meseterápiás és művészetterápiás eszközökkel segítjük a gyerekek érzelmi és szociális fejlődését.
+      </p>
+      <div class="modal-details">
+        <p>Részletek hamarosan!</p>
+      </div>
+      <div class="modal-details" hidden>        
+        <p><strong>Mikor?</strong><br></p>
+        <p><strong>Ár:</strong><br></p>
+        <p><strong>Helyszín:</strong></p>
+      </div>
+      <a href="erdeklodes.html" class="modal-button">Érdekel</a>
+    </div>
+  </div>
+
+  <div id="yoga-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('yoga')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><img src="img/gyerekjoga.png" alt=""></div>
+        <h2 class="modal-title">Gyerekjóga</h2>
+      </div>
+      <p class="modal-description">
+        Ez nem csak jóga, ez egy utazás a képzelet birodalmába! A gyerekjóga játékos formában ismerteti meg a mozgás örömét, a légzés tudatosságát és a belső figyelmet. Minden alkalom egy-egy mese köré épül: lehet, hogy a dzsungelbe indulunk, máskor a mélytenger világát fedezzük fel.
+      </p>
+      <div class="modal-details">
+        <p>Részletek hamarosan!</p>
+      </div>
+      <div class="modal-details" hidden>        
+        <p><strong>Mikor?</strong><br></p>
+        <p><strong>Ár:</strong><br></p>
+        <p><strong>Helyszín:</strong></p>
+      </div>
+      <a href="erdeklodes.html" class="modal-button">Érdekel</a>
+    </div>
+  </div>
+
+  <div id="meseerdo-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('meseerdo')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><img src="img/meseerdo.png" alt=""></div>
+        <h2 class="modal-title">MeseErdő séta</h2>
+      </div>
+      <p class="modal-description">
+        Nem túra. Találkozás a természettel.
+        A MeseErdő sétán a gyerekek lassítanak, figyelnek, észreveszik a „kicsi csodákat”: a levelek rajzát, a szél hangját, a fény útját. A történetek kapukat nyitnak – ezúttal a természet felé. A séta nem teljesítményről szól, hanem jelenlétről, kíváncsiságról és belső nyugalomról.
+      </p>
+      <div class="modal-details">
+        <p>Részletek hamarosan!</p>
+      </div>
+      <div class="modal-details" hidden>        
+        <p><strong>Mikor?</strong><br></p>
+        <p><strong>Ár:</strong><br></p>
+        <p><strong>Helyszín:</strong></p>
+      </div>
+      <a href="erdeklodes.html" class="modal-button">Érdekel</a>
+    </div>
+  </div>
+
+  <div id="rajz-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('rajz')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><img src="img/rajz.png" alt=""></div>
+        <h2 class="modal-title">MeseErdő séta</h2>
+      </div>
+      <p class="modal-description">
+        A gyerekek rajzaiban gyakran olyan érzések, félelmek és vágyak jelennek meg, amelyeket még nem tudnak szavakba önteni.
+        A rajzelemzés segít megérteni a belső világukat, és finom iránymutatást adhat a szülőknek abban, hogyan támogassák őket egy-egy nehezebb élethelyzetben.
+      </p>
+      <div class="modal-details">
+        <p>Részletek hamarosan!</p>
+      </div>
+      <div class="modal-details" hidden>        
+        <p><strong>Mikor?</strong><br></p>
+        <p><strong>Ár:</strong><br></p>
+        <p><strong>Helyszín:</strong></p>
+      </div>
+      <a href="erdeklodes.html" class="modal-button">Érdekel</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="script/foglalkozasok.js"></script>
+</body>
+</html>
