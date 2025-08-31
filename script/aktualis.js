@@ -13,16 +13,19 @@ function toggleMobileMenu() {
         }
       });
 
-      // Add scroll effect to header
+      // Add scroll effect to header and navbar
       let lastScrollTop = 0;
       window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const header = document.querySelector('.header');
-       
+        const navbar = document.querySelector('.navbar-custom');
+        
         if (scrollTop > lastScrollTop && scrollTop > 100) {
           header.style.transform = 'translateY(-100%)';
+          navbar.style.transform = 'translateY(-150px)';
         } else {
           header.style.transform = 'translateY(0)';
+          navbar.style.transform = 'translateY(0)';
         }
         lastScrollTop = scrollTop;
       });
