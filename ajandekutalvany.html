@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mesejó világ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/index_style.css">
+  </head>
+  <body>
+    <!-- Header with Logo -->
+    <header class="header">
+      <div class="logo-container">
+        <img src="img/image.png" alt="Mesejó világ Logo" class="logo" />
+      </div>
+    </header>
+
+    <!-- Desktop Navigation -->
+    <nav class="navbar-custom">
+      <div class="nav-links">
+        <a href="index.html" class="nav-btn">Főoldal</a>
+        <div class="dropdown nav-item">
+                <a href="#" class="nav-btn dropdown-btn">
+                    Foglalkozások
+                </a>
+                <div class="dropdown-content">
+                    <a href="gyerekeknek.html" class="nav-btn">Gyerekeknek</a>
+                    <a href="felnotteknek.html" class="nav-btn">Felnőtteknek</a>
+                </div>
+            </div>
+        <a href="aktualis.html" class="nav-btn">Aktuális</a>
+        <a href="#" class="nav-btn active">Ajándékutalvány</a>
+        <a href="rolam.html" class="nav-btn">Rólam</a>
+        <a href="erdeklodes.html" class="nav-btn">Kapcsolat</a>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+      <button class="close-menu" onclick="toggleMobileMenu()">×</button>
+      <a href="index.html" class="nav-btn" onclick="toggleMobileMenu()">Főoldal</a>
+      <a href="gyerekeknek.html" class="nav-btn" onclick="toggleMobileMenu()">Gyerekeknek</a>
+      <a href="felnotteknek.html" class="nav-btn" onclick="toggleMobileMenu()">Felnőtteknek</a>
+      <a href="aktualis.html" class="nav-btn" onclick="toggleMobileMenu()">Aktuális</a>
+      <a href="#" class="nav-btn" onclick="toggleMobileMenu()">Ajándékutalvány</a>
+      <a href="rolam.html" class="nav-btn" onclick="toggleMobileMenu()">Rólam</a>
+      <a href="erdeklodes.html" class="nav-btn" onclick="toggleMobileMenu()">Kapcsolat</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-wrapper">
+        <h1 class="main-title">Mesejó élmények szeretettel</h1>
+        
+        <p class="main-text">
+          A Mesejó ajándékutalvány egy különleges lehetőség arra, hogy valódi törődést, együtt töltött időt és lélekemelő élményt ajándékozz.
+          Finom, természetközeli, mesés hangulatú programok közül választhat az, aki megkapja: gyerekjóga, interaktív Mesejó foglalkozás, Mesejó Lelki Pihenő felnőtteknek, MeseErdő-séta, egyéni meseterápia vagy rajzelemzés.
+          Az ajándékutalvány digitálisan érkezik, környezettudatos formában.
+          Ezt a kártyát azoknak találtam ki, akik szeretnének több nyugalmat, kapcsolódást és mesés élményt vinni a szeretteik életébe.
+          Egy történetnyi idő, ahol újra közel kerülünk egymáshoz – ez az igazi ajándék.
+        </p>
+
+        <div class="section-content">
+          <h2 class="section-title">Az ajándékutalvány megvásárlása néhány perc alatt elintézhető:</h2>
+          
+          <ol class="styled-list">
+            <li>
+              <strong>Írj nekem üzenetet vagy e-mailt: </strong>
+              <span class="email-link">mesejovilag@gmail.com</span><br>
+              Az üzenetben kérlek add meg:
+              <ul class="styled-sublist">
+                <li>melyik címletet szeretnéd (pl. 10 000 Ft, 15 000 Ft, 20 000 Ft vagy egyéni összeg)</li>
+                <li>kinek készüljön a kártya (keresztnév)</li>
+                <li>mikorra szeretnéd megkapni</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Visszaigazolom a rendelést:</strong>
+              Rövid időn belül válaszolok, és elküldöm a fizetési információkat.
+            </li>
+            <li>
+              <strong>Fizetés</strong>
+              Az ajándékutalvány banki átutalással fizethető. Amint megérkezik az összeg, elkészítem a kártyát.
+            </li>
+            <li>
+              <strong>Átadás</strong>
+              A névre szóló, digitális ajándékkártyát PDF formában küldöm e-mailben 24 órán belül.
+            </li>
+          </ol>
+        </div>
+
+        <!-- Image before Felhasználási feltételek -->
+        <div class="divider-image-container">
+          <img src="img/ajandekutalvany.jpg" alt="Ajándék díszítő elem" class="divider-image" />
+        </div>
+
+        <div class="section-content">
+          <h2 class="section-title">Felhasználási feltételek</h2>
+          
+          <ol class="styled-list">
+            <li>
+              <strong>A megajándékozott az alábbi szolgáltatások egyikére válthatja be:</strong>
+              <ul class="styled-sublist">
+                <li>Gyerekjóga bérlet</li>
+                <li>Interaktív Mesejó foglalkozás</li>
+                <li>Mesejó Lelki Pihenő</li>
+                <li>MeseErdő-séta</li>
+                <li>Egyéni meseterápia</li>
+                <li>Rajzelemzés</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Érvényesség</strong>
+              A kártya a vásárlástól számított 12 hónapig használható fel.
+            </li>
+            <li>
+              <strong>Időpontfoglalás</strong>
+              A felhasználáshoz előzetes bejelentkezés szükséges a foglalkozásokra. Az időpontfoglalás előzetes egyeztetéssel történik: <span class="email-link">mesejovilag@gmail.com</span>
+            </li>
+            <li>
+              <strong>Helyszín</strong>
+              A foglalkozások helyszíne programfüggő (gyerekjóga, Mesejó foglalkozás: általában beltéri; MeseErdő-séta: kültéri).
+              Az egyéni alkalmak helyszíne e-mailben egyeztethető.
+            </li>
+            <li>
+              <strong>Átruházhatóság</strong>
+              A kártya szabadon átruházható, tehát bárki igénybe veheti, akinek továbbadod.
+            </li>
+            <li>
+              <strong>Felhasználás és egyenleg</strong>
+              Pénzre nem váltható, de a teljes összeg levásárolható. Ha a választott szolgáltatás drágább, mint az ajándékutalvány értéke, a különbözet ráfizetéssel rendezhető. Ha olcsóbb szolgáltatást választ a megajándékozott, a visszamaradó összeg a következő vásárlásból automatikusan levonódik, amíg az ajándékkártya le nem jár. Az ajándékutalvány egyszerre vagy több részletben is felhasználható, amíg a rajta lévő összeg tart.
+            </li>
+            <li>
+              <strong>Használat korlátozása</strong>
+              Egy ajándékkártyát egy időpontban csak egy fő használhat fel.
+            </li>
+            <li>
+              <strong>Lemondás / módosítás</strong>
+              Egyéni foglalkozás esetén az időpont 24 órával előtte módosítható. Ha a megajándékozott nem jelenik meg és nem jelez előre, az alkalom felhasználtnak minősül.
+            </li>
+            <li>
+              <strong>Kapcsolat</strong>
+              Időpontfoglalás vagy kérdés esetén: <span class="email-link">mesejovilag@gmail.com</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="doc/mesejo_impresszum.pdf" class="footer-link" target="_blank">Impresszum</a></li>
+                    <li class="footer-separator">•</li>
+                    <li><a href="doc/mesejo_akt.pdf" class="footer-link" target="_blank">Adatkezelési tájékoztató</a></li>
+                </ul>
+            </nav>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">
+                © 2025 Mesejó világ. Minden jog fenntartva.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script/index_script.js"></script>
+  </body>
+
+</html>
