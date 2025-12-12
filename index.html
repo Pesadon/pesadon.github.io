@@ -51,27 +51,30 @@
       <a href="erdeklodes.html" class="nav-btn" onclick="toggleMobileMenu()">Kapcsolat</a>
     </div>
 
-    <!-- Welcome Popup Modal -->
+     <!-- Welcome Popup Modal -->
     <div class="modal" id="welcome-modal">
       <div class="modal-content">
         <button class="close-modal" onclick="closeWelcomeModal()">×</button>
+        <h2 class="modal-title">Karácsonyi ajándékutalvány és kupon!</h2>
+        
+        <!-- Video Container -->
+        <div class="modal-video-container">
+          <video class="modal-video" controls autoplay muted>
+            <source src="img/au.mp4" type="video/mp4">
+            A böngésződ nem támogatja a videó lejátszást.
+          </video>
+        </div>
+        
+        <!-- Text below video -->
+        <p class="modal-info-text"><a href="ajandekutalvany.html">Kattints a további információkért</a></p>
+        
+        <!-- Image Container -->
         <div class="modal-image-container">
           <img src="img/kupon.jpg" alt="Karácsonyi kupon" class="modal-main-image" />
         </div>
-        <h2 class="modal-title">Karácsonyi kupon!</h2>
-        <div class="modal-description">
-          <p>Felhasználási feltételek:</p>
-          <ul>
-            <li>A kuponok egyszeri alkalommal használhatók fel.</li>
-            <li>Más kedvezménnyel nem vonhatók össze.</li>
-            <li>Egy foglalkozás alkalmával csak egy kupon váltható be gyermekenként.</li>
-            <li>A kupon átadható, így bárki használhatja.</li>
-            <li>Készpénzre nem váltható.</li>
-            <li>Ha a kupon más dátumot nem tartalmaz, akkor 2026. március 31-ig érvényes.</li>
-            <li>A Barát-kupon akkor érvényes, ha a két gyermek ugyanazon a foglalkozáson vesz részt.</li>
-            <li>A Mikulás-zokni kupon kizárólag december 6-án használható fel.</li>
-          </ul>
-        </div>
+        
+        <!-- Text below image -->
+        <p class="modal-info-text"><a href="doc/kupon.pdf" target="_blank">Kattints a további információkért</a></p>
       </div>
     </div>
 

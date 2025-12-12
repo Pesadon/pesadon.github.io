@@ -22,6 +22,21 @@ function closeWelcomeModal() {
   document.body.style.overflow = 'auto';
 }
 
+// Function specifically for welcome modal
+function closeWelcomeModal() {
+  const modal = document.getElementById('welcome-modal');
+  const video = modal.querySelector('.modal-video');
+  
+  // Stop video playback
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+  
+  modal.classList.remove('show');
+  document.body.style.overflow = 'auto';
+}
+
 // Close mobile menu when clicking outside
 document.addEventListener('click', function(event) {
   const mobileMenu = document.getElementById('mobileNavMenu');
