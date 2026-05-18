@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style/aktualis.css">
+    <link rel="stylesheet" href="style/naptar.css">
   </head>
   <body>
     <!-- Header with Logo -->
@@ -58,16 +59,52 @@
     <main class="main-content">
       <h1 class="page-title">Aktuális események</h1>
 
+      <!-- Calendar Section -->
+      <div class="calendar-section">
+        <div class="calendar-wrapper" id="calendarWrapper">
+          <!-- Month Navigation -->
+          <div class="calendar-nav">
+            <button class="calendar-nav-btn" id="calPrevBtn" onclick="changeMonth(-1)" aria-label="Előző hónap">‹</button>
+            <span class="calendar-month-title" id="calMonthTitle"></span>
+            <button class="calendar-nav-btn" id="calNextBtn" onclick="changeMonth(1)" aria-label="Következő hónap">›</button>
+          </div>
+
+          <!-- Weekday Headers -->
+          <div class="calendar-weekdays">
+            <div class="calendar-weekday">H</div>
+            <div class="calendar-weekday">K</div>
+            <div class="calendar-weekday">Sz</div>
+            <div class="calendar-weekday">Cs</div>
+            <div class="calendar-weekday">P</div>
+            <div class="calendar-weekday">Sz</div>
+            <div class="calendar-weekday">V</div>
+          </div>
+
+          <!-- Day Grid -->
+          <div class="calendar-grid" id="calGrid"></div>
+
+          <p class="swipe-hint">← csúsztatással lapozhat →</p>
+        </div>
+      </div>
+
+      <!-- Event Modal -->
+      <div id="eventModal" class="event-modal">
+        <div class="event-modal-content">
+          <button class="event-close-btn" onclick="closeEventModal()">×</button>
+          <p class="event-modal-date" id="evModalDate"></p>
+          <h2 class="event-modal-title" id="evModalTitle"></h2>
+          <p class="event-modal-description" id="evModalDesc"></p>
+          <div class="event-modal-details" id="evModalDetails"></div>
+          <a href="#" id="evModalBtn" class="event-modal-btn" target="_blank">Jelentkezés</a>
+        </div>
+      </div>
+
       <div class="news-container">
         <!-- Aktuális események -->
 
-        <article class="news-block featured-news">
-          <img src="img/aprilis.jpg" alt="Mesejó április" class="w-50 rounded mx-auto d-block">
-        </article>
-
-        <article class="news-block featured-news">
+        <!--<article class="news-block featured-news">
           <img src="img/gyj_general.jpg" alt="Gyerekjóga" class="w-50 rounded mx-auto d-block">
-        </article>
+        </article>-->
     </main>
 
     <footer class="footer">
@@ -89,9 +126,8 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
+    <script src="script/naptar.js"></script>
     <script src="script/aktualis.js"></script>
   </body>
 
 </html>
-
-
