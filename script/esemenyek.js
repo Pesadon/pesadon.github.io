@@ -323,45 +323,20 @@ const EVENTS = [
     title: "Mesejó nyár - Mesejó alkotónapok",
     startDate: "2026-07-16",
     endDate:   "2026-07-17",
-    time: "8:00-12:00",
+    time: "16:30-18:30",
     location: "Veszprém",
-    description: `Mesés kreatív délelőttök | 6–10 éveseknek
+    description: `Mesejó alkotónapok – Készítsd el a saját mesekönyvedet!
 
-    A Mesejó Alkotónapokon nem „szép egyforma munkák” készülnek — hanem saját ötletek, mesék és alkotások születnek.
+    Van egy történet a fejedben? Most könyvvé válhat!
 
-    Ezeken a délelőttökön a gyerekek játékosan ismerkedhetnek különféle kreatív technikákkal:
-    🎨 kézműveskedés,
-    📖 papír- és pop-up alkotások,
-    🪶 természetes anyagok használata,
-    🧡 origami,
-    ✨ mesei tárgyak és saját kis világok készítése vár rájuk.
+    A Mesejó alkotónapokon két délután alatt saját mesekönyvet készíthetsz – te írod, te illusztrálod, te formálod.
 
-    Az alkotásokat minden alkalommal mese, közös játék vagy egy különleges téma inspirálja, így a gyerekek nemcsak „kézműveskednek”, hanem belehelyezkedhetnek egy történetbe is.
+    ✨ pop-up meglepetések a lapokon
+    📄 origami figurák és jelenetek
+    🎨 festés, rajzolás, kreatív technikák
+    📚 és a végén: egy teljesen egyedi, saját mesekönyv
 
-    A hangsúly nem a tökéletességen van, hanem:
-    🌿 az örömteli alkotáson,
-    🌿 a fantázia kibontakoztatásán,
-    🌿 az önkifejezésen,
-    🌿 és azon, hogy a gyerekek megtapasztalják:
-    „amit elképzelek, azt létre is hozhatom.”
-
-    A Mesejó Alkotónapok nyugodtabb, kapcsolódóbb légkörű kreatív műhelyek, ahol jut idő:
-    💛 figyelni,
-    💛 próbálkozni,
-    💛 elmélyülni,
-    💛 és örülni a saját ötleteknek.
-
-    Különösen ajánljuk:
-    🌈 kreatív,
-    🌈 álmodozó,
-    🌈 kíváncsi,
-    🌈 alkotni szerető gyerekeknek.
-
-    A csoport kis létszámú (maximum 15 fő), így minden gyerek személyes figyelmet és segítséget kaphat.
-
-    🍎 Gyümölcsöt és könnyű nasit biztosítunk.
-
-    Alkotás. Fantázia. Mese. Öröm. Kapcsolódás.`,
+    Ez nem csak alkotás – ez egy igazi meseutazás, ahol a képzeletből könyv születik.`,
     signupUrl: "https://forms.gle/TVMXdCsQ9UyLSBDA9"
   },
   {
