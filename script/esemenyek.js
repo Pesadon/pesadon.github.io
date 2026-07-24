@@ -341,49 +341,43 @@ const EVENTS = [
   },
   {
     id: "alkotonap-2026-08-17-18",
-    title: "Mesejó nyár - Mesejó alkotónapok",
+    title: "Mesejó nyár - Mesejó alkotódélutánok",
     startDate: "2026-08-17",
     endDate:   "2026-08-18",
-    time: "8:00-12:00",
+    time: "16:30-19:30",
     location: "Veszprém",
-    description: `Mesés kreatív délelőttök | 6–10 éveseknek
+    description: `Mesejó alkotódélutánok felnőtteknek
 
-    A Mesejó Alkotónapokon nem „szép egyforma munkák” készülnek — hanem saját ötletek, mesék és alkotások születnek.
+    Két délután, amikor végre te is alkothatsz.
 
-    Ezeken a délelőttökön a gyerekek játékosan ismerkedhetnek különféle kreatív technikákkal:
-    🎨 kézműveskedés,
-    📖 papír- és pop-up alkotások,
-    🪶 természetes anyagok használata,
-    🧡 origami,
-    ✨ mesei tárgyak és saját kis világok készítése vár rájuk.
+    Annyi mindent készítünk a gyerekeinkkel. Segítünk, biztatunk, ragasztunk, hajtogatunk… közben sokszor észre sem vesszük, hogy mi magunk is mennyire vágyunk az alkotás örömére.
 
-    Az alkotásokat minden alkalommal mese, közös játék vagy egy különleges téma inspirálja, így a gyerekek nemcsak „kézműveskednek”, hanem belehelyezkedhetnek egy történetbe is.
+    Ez a két délután most rólad szól.
 
-    A hangsúly nem a tökéletességen van, hanem:
-    🌿 az örömteli alkotáson,
-    🌿 a fantázia kibontakoztatásán,
-    🌿 az önkifejezésen,
-    🌿 és azon, hogy a gyerekek megtapasztalják:
-    „amit elképzelek, azt létre is hozhatom.”
+    Nem kell tudnod rajzolni.
+    Nem kell kreatívnak tartanod magad.
+    Nem kell megfelelned senkinek.
 
-    A Mesejó Alkotónapok nyugodtabb, kapcsolódóbb légkörű kreatív műhelyek, ahol jut idő:
-    💛 figyelni,
-    💛 próbálkozni,
-    💛 elmélyülni,
-    💛 és örülni a saját ötleteknek.
+    Csak gyere el, engedd el egy kicsit a hétköznapokat, és tapasztald meg, milyen érzés, amikor a két kezed között lassan megszületik valami igazán különleges.
 
-    Különösen ajánljuk:
-    🌈 kreatív,
-    🌈 álmodozó,
-    🌈 kíváncsi,
-    🌈 alkotni szerető gyerekeknek.
+    A két alkalom során egy egyedi, kézzel készített könyvet alkotunk. Papírból, színekből, különleges technikákkal és egy csipetnyi mesei varázslattal. Lépésről lépésre vezetlek végig az egész folyamaton, így semmilyen előzetes tapasztalatra nincs szükség.
 
-    A csoport kis létszámú (maximum 15 fő), így minden gyerek személyes figyelmet és segítséget kaphat.
+    Amit hazaviszel:
+    🌿 egy saját készítésű, különleges alkotást
+    🌿 néhány óra nyugodt, kreatív kikapcsolódást
+    🌿 az alkotás örömét és azt az érzést, hogy jó volt végre magadra is időt szánni  
+    
+    Részvételi díj
+    Early bird:  20 000 Ft / fő / 2 alkalom (az első 4 jelentkezőnek)
+    Normál ár: 25 000 Ft/ fő / 2 alkalom
+    (A díj minden szükséges alapanyagot tartalmaz.)
 
-    🍎 Gyümölcsöt és könnyű nasit biztosítunk.
+    👥 A létszám korlátozott, hogy mindenkire jusson idő és figyelem.
 
-    Alkotás. Fantázia. Mese. Öröm. Kapcsolódás.`,
-    signupUrl: "https://forms.gle/TVMXdCsQ9UyLSBDA9"
+    Ha szeretnél két estére kiszakadni a hétköznapokból, lelassulni, alkotni és feltöltődni, szeretettel várlak a Mesejó Alkotódélutánokon!
+
+    Jelentkezés: mesejovilag@gmail.com`,
+    signupUrl: "mailto:mesejovilag@gmail.com"
   },
   {
     id: "meseerdo-2026-08-22",
