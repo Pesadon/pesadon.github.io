@@ -1,0 +1,41 @@
+---
+// Shared "activity card" popup shell — used by Gyerekeknek, Felnőtteknek,
+// and Rólam's "Szakmai háttér" modal. Each page passes its own icon, title,
+// description and details/price block; the surrounding markup (close
+// button, layout, "Érdekel" link) only needs to exist once now.
+//
+// Usage:
+// <ActivityModal id="yoga" iconSrc="/img/gyerekjoga.png" title="Gyerekjóga">
+//   <Fragment slot="description">... paragraph text ...</Fragment>
+//   <Fragment slot="details"><p><strong>Ár: </strong>...</p></Fragment>
+// </ActivityModal>
+
+export interface Props {
+  id: string;
+  /** Omit (or pass an empty string) for a modal with no icon circle — e.g. Rólam's. */
+  iconSrc?: string;
+  title: string;
+  /** Where the "Érdekel" button should link. Defaults to the contact page. */
+  ctaHref?: string;
+  /** Set to false to hide the "Érdekel" button (used by Rólam's info-only modal). */
+  showCta?: boolean;
+}
+
+const { id, iconSrc, title, ctaHref = '/erdeklodes', showCta = true } = Astro.props;
+---
+<div id={`${id}-modal`} class="modal">
+  <div class="modal-content">
+    <button class="close-modal" onclick={`closeModal('${id}')`}>&times;</button>
+    <div class="modal-header">
+      {iconSrc && <div class="modal-icon"><img src={iconSrc} alt="" class="mesejo_img" /></div>}
+      <h2 class="modal-title">{title}</h2>
+    </div>
+    <p class="modal-description">
+      <slot name="description" />
+    </p>
+    <div class="modal-details">
+      <slot name="details" />
+    </div>
+    {showCta && <a href={ctaHref} class="modal-button">Érdekel</a>}
+  </div>
+</div>

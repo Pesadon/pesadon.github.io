@@ -1,0 +1,157 @@
+/* Homepage-only styles: hero text + the "Mesejó nyár" welcome popup.
+   Trimmed from index_style.css — the nav/footer/modal-shell rules that
+   used to be duplicated here are in global.css now.
+
+   NOTE ON FIDELITY: index_style.css defined .modal-content and .modal-title
+   twice each (an earlier, wider block and a later, narrower one). CSS
+   resolves conflicts like this per-property, not by picking one block
+   wholesale, so the values below are the actual computed result: a 700px
+   box with min-height: 500px (only ever set once, so it survives even
+   though the second block doesn't mention it), and a heading forced to
+   3.5rem by a stray `!important` in the earlier block, overriding the
+   2.8rem in the later one. That's genuinely what's live today — flagging
+   it in case the 3.5rem heading size wasn't intentional. */
+
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12.5rem 1.875rem 3.75rem;
+  text-align: center;
+}
+
+.content-wrapper {
+  width: 90%;
+  max-width: 70rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(0.9375rem);
+  border-radius: 1.875rem;
+  padding: 3.75rem 2.5rem;
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  animation: fadeInUp 1s ease-out;
+}
+
+.main-title {
+  font-size: 5rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #6d5200;
+  margin-bottom: 1.875rem;
+  line-height: 1.2;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.3);
+}
+
+.main-text {
+  font-size: 1.7rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  line-height: 1.7;
+  color: #6d5200;
+  margin-bottom: 2.5rem;
+  text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(255, 255, 255, 0.2);
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.cta-button {
+  background-color: transparent;
+  border: 0.125rem solid #6d5200;
+  color: #6d5200;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 1.8rem;
+  border-radius: 1.875rem;
+  padding: 1.25rem 2.5rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin: 0 0.625rem;
+}
+
+.cta-button:hover {
+  background-color: #fff2cc;
+  color: #6d5200;
+  transform: translateY(-0.1875rem);
+  box-shadow: 0 0.3125rem 0.9375rem rgba(109, 82, 0, 0.2);
+}
+
+/* Welcome popup modal */
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(1.25rem);
+  margin: 2rem;
+  padding: 4rem;
+  border-radius: 2rem;
+  max-width: 700px;
+  width: 90%;
+  min-height: 500px;
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+  border: 0.125rem solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 3.5rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  color: #6d5200;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.modal-main-image {
+  max-width: 600px;
+  width: 80%;
+  height: auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 48rem) {
+  .main-content {
+    padding: 7.5rem 1.25rem 2.5rem;
+  }
+  .content-wrapper {
+    padding: 2.5rem 1.5625rem;
+    border-radius: 1.25rem;
+  }
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .main-text {
+    font-size: 1.1rem;
+  }
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 0.9375rem 1.875rem;
+  }
+  .modal-content {
+    margin: 1rem;
+    padding: 2.5rem 1.5rem;
+  }
+  .modal-title {
+    font-size: 2rem;
+  }
+  .modal-main-image {
+    max-width: 200px;
+  }
+}

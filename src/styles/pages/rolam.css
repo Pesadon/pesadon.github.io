@@ -1,0 +1,85 @@
+/* Rólam (about) page — trimmed from index_style.css */
+
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 12.5rem 1.875rem 3.75rem;
+  text-align: center;
+}
+
+.content-wrapper {
+  width: 90%;
+  max-width: 70rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(0.9375rem);
+  border-radius: 1.875rem;
+  padding: 3.75rem 2.5rem;
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  animation: fadeInUp 1s ease-out;
+}
+
+.main-title {
+  font-size: 5rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #6d5200;
+  margin-bottom: 1.875rem;
+  line-height: 1.2;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.3);
+}
+
+.main-text {
+  font-size: 1.7rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  line-height: 1.7;
+  color: #6d5200;
+  margin-bottom: 2.5rem;
+  text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(255, 255, 255, 0.2);
+}
+
+/* Portrait photo, floated so the bio text wraps around it.
+   Kept exactly as in the original — it has no responsive override, so it
+   stays at 30% width even on small screens. Worth revisiting, but not
+   changed here since the brief was to keep things looking the same. */
+.img-float {
+  width: 30%;
+  float: inline-end;
+  margin: 1rem;
+}
+
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.7rem;
+}
+
+@media (max-width: 48rem) {
+  .main-content {
+    padding: 7.5rem 1.25rem 2.5rem;
+  }
+  .content-wrapper {
+    padding: 2.5rem 1.5625rem;
+    border-radius: 1.25rem;
+  }
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .main-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .main-title {
+    font-size: 2rem;
+  }
+  .main-text {
+    font-size: 1rem;
+  }
+  .content-wrapper {
+    padding: 1.875rem 1.25rem;
+  }
+}

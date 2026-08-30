@@ -1,14 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "mesejo",
-  "compatibility_date": "2026-05-28",
-  "observability": {
-    "enabled": true
-  },
+  "compatibility_date": "2026-08-30",
+  "compatibility_flags": ["nodejs_compat"],
   "assets": {
-    "directory": "."
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+    "directory": "./dist"
+  }
 }

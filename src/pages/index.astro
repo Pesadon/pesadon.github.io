@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getUpcomingEvents, MONTHS_HU_GEN } from '../data/events.js';
+import '../styles/pages/index.css';
+import '../styles/pages/upcoming-strip.css';
+
+// This used to be rendered client-side after page load by
+// index_esemenyek.js (a brief flash of an empty strip, then the cards pop
+// in). Since Astro pages run this code at build time, the strip can just
+// be part of the HTML from the start — same data, same events.js helpers,
+// no flash, and no client-side JS needed for this section at all.
+const upcoming = getUpcomingEvents(3);
+---
+<Layout title="Mesejó világ" activeNav="fooldal">
+  <div class="modal" id="welcome-modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeWelcomeModal()">&times;</button>
+      <h2 class="modal-title">Mesejó nyár!</h2>
+      <div class="modal-image-container">
+        <img src="/img/nyar.jpg" alt="Mesejó nyár" class="modal-main-image" />
+      </div>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="content-wrapper">
+      <h1 class="main-title">Mesejó világ</h1>
+      <p class="main-text">
+        Üdvözöllek ezen a különleges helyen, ahol a mesék életre kelnek,
+        a játék gyógyít, a csend megtart, és ahol kicsik és nagyok is
+        újra kapcsolódhatnak önmagukhoz. Lépj be te is ebbe a világba,
+        ahol gyereket és felnőttet egyaránt élmény, megnyugvás,
+        önismereti utazás és támogató segítség vár.
+      </p>
+      <div class="buttons-container">
+        <a href="/gyerekeknek" class="cta-button">Gyerekeknek</a>
+        <a href="/felnotteknek" class="cta-button">Felnőtteknek</a>
+      </div>
+    </div>
+
+    {upcoming.length > 0 && (
+      <div id="upcomingEventsStrip" class="upcoming-strip">
+        <h2 class="upcoming-strip-title">Közelgő események</h2>
+        <div class="upcoming-strip-cards">
+          {upcoming.map((ev) => {
+            const s = ev._start;
+            const isMultiDay = s.toDateString() !== ev._end.toDateString();
+            const monthShort = MONTHS_HU_GEN[s.getMonth()].slice(0, 3) + '.';
+            const dayLabel = isMultiDay ? `${s.getDate()}–${ev._end.getDate()}` : `${s.getDate()}`;
+            return (
+              <a href="/naptar" class="upcoming-card">
+                <div class="upcoming-card-date">
+                  <span class="upcoming-day">{dayLabel}</span>
+                  <span class="upcoming-month">{monthShort}</span>
+                </div>
+                <div class="upcoming-card-body">
+                  <div class="upcoming-card-title">{ev.title}</div>
+                  <div class="upcoming-card-meta">🕐 {ev.time}</div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+        <a href="/naptar" class="upcoming-strip-more">Összes esemény →</a>
+      </div>
+    )}
+  </main>
+
+  <Fragment slot="scripts">
+    <script>
+      function closeWelcomeModal() {
+        const modal = document.getElementById('welcome-modal');
+        const video = modal?.querySelector('.modal-video'); // no video today, kept as a harmless guard
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+        modal?.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
+      window.closeWelcomeModal = closeWelcomeModal;
+
+      // Auto-show the welcome popup shortly after the page loads
+      setTimeout(() => {
+        const modal = document.getElementById('welcome-modal');
+        modal?.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }, 500);
+    </script>
+  </Fragment>
+</Layout>

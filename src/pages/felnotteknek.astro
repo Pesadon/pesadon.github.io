@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ActivityModal from '../components/ActivityModal.astro';
+import '../styles/pages/activities.css';
+import '../styles/pages/activity-modal.css';
+---
+<Layout title="Foglalkozások felnőtteknek" activeNav="felnotteknek" bodyBg="sky">
+  <main class="main-content">
+    <div class="content-wrapper">
+      <h1 class="page-title">Foglalkozások felnőtteknek</h1>
+
+      <div class="activities-grid">
+        <div class="activity-card" onclick="openModal('meseerdo')">
+          <div class="activity-icon"><img src="/img/meseerdo.png" alt="" /></div>
+          <h3 class="activity-title">MeseErdő séták</h3>
+        </div>
+
+        <div class="activity-card" onclick="openModal('rajz')">
+          <div class="activity-icon"><img src="/img/rajz.png" alt="" /></div>
+          <h3 class="activity-title">Rajzelemzés</h3>
+        </div>
+
+        <div class="activity-card" onclick="openModal('lifecoach')">
+          <div class="activity-icon"><img src="/img/lifecoach.png" alt="" /></div>
+          <h3 class="activity-title">Life coaching</h3>
+        </div>
+
+        <div class="activity-card" onclick="openModal('lelkipiheno')">
+          <div class="activity-icon"><img src="/img/lp.jpg" alt="" /></div>
+          <h3 class="activity-title">Mesejó lelki pihenő</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <ActivityModal id="meseerdo" iconSrc="/img/meseerdo.png" title="MeseErdő séták felnőtteknek">
+    <Fragment slot="description">
+      A MeseErdő séta nem teljesítménytúra, hanem lelki és testi elcsendesülés: lehetőség arra, hogy kiszakadj a mindennapok rohanásából, és újra megtaláld a kapcsolatot önmagaddal, másokkal és a természettel.
+      A természet csendje, a mesék szimbolikus üzenetei és a közös beszélgetések segítenek abban, hogy új nézőpontok szülessenek, és közelebb kerülj a saját belső erődhöz és harmóniádhoz.
+    </Fragment>
+    <Fragment slot="details">
+      <p><strong>Árak: egyéni árazás programtól függően</strong><br /></p>
+    </Fragment>
+  </ActivityModal>
+
+  <ActivityModal id="rajz" iconSrc="/img/rajz.png" title="Rajzelemzés felnőtteknek">
+    <Fragment slot="description">
+      A rajz a lélek lenyomata – akkor is, ha „nem tudsz rajzolni”.
+      A felnőttek rajzaiban is megmutatkoznak azok a belső minták, érzések és szimbólumok, amelyek segítenek rálátni az élethelyzetek mélyebb rétegeire.
+    </Fragment>
+    <Fragment slot="details">
+      <p><strong>Időtartam: </strong>3x60 perc</p>
+      <p><strong>Ár: </strong>45000 Ft</p>
+    </Fragment>
+  </ActivityModal>
+
+  <ActivityModal id="lifecoach" iconSrc="/img/lifecoach.png" title="Life coaching">
+    <Fragment slot="description">
+      Az életünkben mindannyiunknak vannak olyan időszakok, amikor elakadunk: változás előtt állunk, döntést kell hoznunk, vagy egyszerűen csak keressük az irányt, ami igazán hozzánk illik.
+      A life coaching támogat abban, hogy tisztábban lásd a céljaidat, erőforrásaidat, és megtaláld a saját utadat. Igény szerint mese- és/vagy művészetterápiás elemekkel.
+    </Fragment>
+    <Fragment slot="details">
+      <p><strong>Időtartam: </strong>60 perc</p>
+      <p><strong>Ár: </strong>15000 Ft/alkalom, ingyenes előzetes konzultáció<br /></p>
+    </Fragment>
+  </ActivityModal>
+
+  <ActivityModal id="lelkipiheno" iconSrc="/img/lp.jpg" title="Mesejó Lelki Pihenő">
+    <Fragment slot="description">
+      Egy hely, ahol megpihenhet a lélek. Ahol a mesék vezetnek. <br />
+      A Mesejó Lelki Pihenő olyan különleges alkalom felnőtteknek, ahol a mesék bölcsessége, a test finomhangolása és az alkotás ereje találkozik.
+      Egy olyan tér, ahová bárki megérkezhet - túlterheltséggel, bizonytalansággal, változásban vagy keresésben -, és ahol biztonságban megengedheti magának a lassulást.
+    </Fragment>
+    <Fragment slot="details">
+      <p><strong>Helyszín: </strong>Veszprém</p>
+      <p><strong>Időtartam: </strong>180 perc</p>
+      <p><strong>Ár: </strong>15000 Ft<br /></p>
+    </Fragment>
+  </ActivityModal>
+
+  <Fragment slot="scripts">
+    <script>
+      import '../scripts/modal.js';
+    </script>
+  </Fragment>
+</Layout>

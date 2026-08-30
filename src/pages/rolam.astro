@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ActivityModal from '../components/ActivityModal.astro';
+import '../styles/pages/rolam.css';
+import '../styles/pages/activity-modal.css';
+
+// This trigger button was hidden in the original too (the `hidden`
+// attribute below is carried over as-is), meaning nobody could actually
+// open this modal on the live site. Kept exactly as-is — flagging in the
+// chat response in case that was accidental and you'd like it shown.
+---
+<Layout title="Mesejó világ - Rólam" activeNav="rolam">
+  <main class="main-content">
+    <div class="content-wrapper">
+      <h1 class="main-title">Rólam</h1>
+      <p class="main-text">
+        <img src="/img/selfface.jpg" alt="Önarckép" class="img-float" />
+        Mindig hittem abban, hogy a mesék és a természet különleges kapukat nyitnak: a gyerekek belső világához és a felnőttek önmagukhoz vezető útján is.
+        Gyerekekkel dolgozva azt látom, milyen felszabadító, amikor egy mese vagy egy játék segít megérteni és kimondani érzéseket, vagy amikor egy alkotásban oldódik a feszültség.
+        Felnőttek kísérése közben pedig újra és újra megtapasztalom, hogy a mesék szimbólumai, a művészet és a természet ereje képes segíteni bennünket abban, hogy megálljunk, ránézzünk önmagunkra, és új nézőpontokat találjunk.
+
+        A Mesejó világot azért álmodtam meg, hogy legyen egy biztonságos, elfogadó tér, ahol gyerekek és felnőttek egyaránt megtapasztalhatják: a belső erő bennünk rejlik – csak meg kell találnunk a hozzá vezető fonalat.
+      </p>
+      <p class="signature">Perczel-Szabó Katalin</p>
+
+      <button class="modal-button" onclick="openModal('mesejo')" hidden>Szakmai háttér</button>
+    </div>
+  </main>
+
+  <ActivityModal id="mesejo" title="Szakmai háttér" showCta={false}>
+    <Fragment slot="description">
+      <ul>
+        <li>Óvónő, tanító, Waldorf-tanár</li>
+        <li>Gyógypedagógiai asszisztens, valamint néptáncpedagógus végzettség</li>
+        <li>Meseterápiás és mesepszichológiai módszerek: Mesehős, MeseErdő-séta, Mesejáró térkép, Érzel-mesék</li>
+        <li>Érzelmi és szociális nevelés művészeti eszközökkel, gyerekjóga (Jógakaland), élménypedagógia</li>
+        <li>Speciális szükségletű gyermekek támogatása: autizmus, magatartási és beilleszkedési nehézségek, differenciált fejlesztés</li>
+        <li>Okleveles rajzvizsgálati szakértő</li>
+        <li>Life coaching szemlélet, amelyet felnőttekkel való önismereti munkában is alkalmazok</li>
+      </ul>
+    </Fragment>
+  </ActivityModal>
+
+  <Fragment slot="scripts">
+    <script>
+      import '../scripts/modal.js';
+    </script>
+  </Fragment>
+</Layout>

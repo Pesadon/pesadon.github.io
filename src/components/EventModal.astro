@@ -1,0 +1,15 @@
+---
+// Shared event-detail popup, used identically by the Aktuális and Naptár
+// pages. Filled in at runtime by openEventModal() in
+// src/scripts/calendar-month.js.
+---
+<div id="eventModal" class="event-modal">
+  <div class="event-modal-content">
+    <button class="event-close-btn" onclick="closeEventModal()">×</button>
+    <p class="event-modal-date" id="evModalDate"></p>
+    <h2 class="event-modal-title" id="evModalTitle"></h2>
+    <p class="event-modal-description" id="evModalDesc"></p>
+    <div class="event-modal-details" id="evModalDetails"></div>
+    <a href="#" id="evModalBtn" class="event-modal-btn" target="_blank">Jelentkezés</a>
+  </div>
+</div>

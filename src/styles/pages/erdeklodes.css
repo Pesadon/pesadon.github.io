@@ -1,0 +1,254 @@
+/* Kapcsolat (contact) page — trimmed from erdeklodes.css */
+
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 12.5rem 1.875rem 3.75rem;
+}
+
+.content-wrapper {
+  width: 90%;
+  max-width: 80rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(0.9375rem);
+  border-radius: 1.875rem;
+  padding: 3.75rem 2.5rem;
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  animation: fadeInUp 1s ease-out;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #6d5200;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.call-section {
+  background: rgba(255, 242, 204, 0.8);
+  backdrop-filter: blur(0.5rem);
+  border: 0.125rem solid #6d5200;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.call-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #6d5200;
+  margin-bottom: 1rem;
+}
+
+.call-section p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #6d5200;
+}
+
+.phone-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+  color: #6d5200;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 0.125rem solid #6d5200;
+}
+
+.phone-number:hover {
+  color: #6d5200;
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(0.5rem);
+  border: 0.125rem solid #6d5200;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  color: #6d5200;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-control {
+  border: 0.125rem solid #6d5200;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 249, 236, 0.8);
+  color: #6d5200;
+  margin-bottom: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #8a6500;
+  box-shadow: 0 0 0 0.2rem rgba(109, 82, 0, 0.25);
+  background: rgba(255, 249, 236, 0.9);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: rgba(109, 82, 0, 0.6);
+  font-style: italic;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  color: #6d5200;
+  margin-bottom: 1rem;
+}
+
+.form-check {
+  margin-bottom: 0.8rem;
+  padding-left: 2rem;
+}
+
+.form-check-input {
+  border: 0.125rem solid #6d5200;
+  background: rgba(255, 249, 236, 0.8);
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: -2rem;
+  margin-top: 0.125rem;
+}
+
+.form-check-input:checked {
+  background-color: #6d5200;
+  border-color: #6d5200;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(109, 82, 0, 0.25);
+}
+
+.form-check-label {
+  color: #6d5200;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #6d5200, #8a6500);
+  border: 0.125rem solid #6d5200;
+  color: #fff9ec;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 1.875rem;
+  padding: 1rem 2.5rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #8a6500, #6d5200);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(109, 82, 0, 0.3);
+}
+
+.required {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.error {
+  border-color: #d32f2f !important;
+  background: rgba(255, 235, 235, 0.8) !important;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.success-message {
+  background: #2fd33a;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: none;
+  font-weight: 600;
+  box-shadow: 0 0.5rem 1.5rem rgba(76, 175, 80, 0.3);
+}
+
+.fb-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 48rem) {
+  .main-content {
+    padding: 7.5rem 1.25rem 2.5rem;
+  }
+  .content-wrapper {
+    padding: 2.5rem 1.5625rem;
+    border-radius: 1.25rem;
+  }
+  .page-title {
+    font-size: 2.5rem;
+  }
+  .call-section,
+  .form-section {
+    padding: 1.5rem;
+  }
+  .phone-number {
+    font-size: 1.4rem;
+  }
+  .submit-btn {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .page-title {
+    font-size: 2rem;
+  }
+  .content-wrapper {
+    padding: 1.875rem 1.25rem;
+  }
+  .call-section,
+  .form-section {
+    padding: 1.25rem;
+  }
+  .phone-number {
+    font-size: 1.2rem;
+  }
+}

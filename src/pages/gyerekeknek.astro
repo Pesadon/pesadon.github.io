@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ActivityModal from '../components/ActivityModal.astro';
+import '../styles/pages/activities.css';
+import '../styles/pages/activity-modal.css';
+---
+<Layout title="Foglalkozások gyerekeknek" activeNav="gyerekeknek" bodyBg="sky">
+  <main class="main-content">
+    <div class="content-wrapper">
+      <h1 class="page-title">Foglalkozások gyerekeknek</h1>
+
+      <div class="activities-grid">
+        <div class="activity-card" onclick="openModal('mesejo')">
+          <div class="activity-icon"><img src="/img/mj.png" alt="" class="mesejo_img" /></div>
+          <h3 class="activity-title">Mesejó foglalkozások</h3>
+        </div>
+
+        <div class="activity-card" onclick="openModal('yoga')">
+          <div class="activity-icon"><img src="/img/gyerekjoga.png" alt="" /></div>
+          <h3 class="activity-title">Gyerekjóga</h3>
+        </div>
+
+        <div class="activity-card" onclick="openModal('meseerdo')">
+          <div class="activity-icon"><img src="/img/meseerdo.png" alt="" /></div>
+          <h3 class="activity-title">MeseErdő séták</h3>
+        </div>
+
+        <div class="activity-card" onclick="openModal('rajz')">
+          <div class="activity-icon"><img src="/img/rajz.png" alt="" /></div>
+          <h3 class="activity-title">Rajzelemzés</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <ActivityModal id="mesejo" iconSrc="/img/mj.png" title="Mesejó foglalkozások">
+    <Fragment slot="description">
+      A Mesejó világban a történetek kapukat nyitnak – nemcsak a képzelet világába, hanem a gyerekek belső világához is.
+      A meséken keresztül ismerhetik meg az érzelmeiket, erőforrásaikat, nehézségeiket, és tanulhatják meg, hogyan viszonyuljanak másokhoz elfogadással, empátiával. Továbbá a mesék és az alkotás lehetőséget adnak a stressz és feszültség oldására, a szorongások enyhítésére.
+      A foglalkozások során élőszavas mesemondással hívjuk életre a történeteket, alkotással, mozgással, játékkal dolgozzuk fel az élményt, meseterápiás és művészetterápiás eszközökkel segítjük a gyerekek érzelmi és szociális fejlődését.
+    </Fragment>
+    <Fragment slot="details">
+      <p><strong>Időpontok: </strong>minden héten szombaton, 10:00</p>
+      <p><strong>Időtartam: </strong>60-80 perc</p>
+      <p><strong>Helyszín: </strong>Tótágas Mozgás- és Fejlesztő Stúdió, 8230 Balatonfüred, Ady Endre u. 44.</p>
+      <p><strong>Árak: </strong><br />Egyéni: 8500Ft <br />Kiscsoportos:<br />- 1 alkalom: 6500 Ft<br />- 4 alkalmas bérlet: 24000 Ft</p>
+    </Fragment>
+  </ActivityModal>
+
+  <ActivityModal id="yoga" iconSrc="/img/gyerekjoga.png" title="Gyerekjóga">
+    <Fragment slot="description">
+      Ez nem csak jóga, ez egy utazás a képzelet birodalmába! A gyerekjóga játékos formában ismerteti meg a mozgás örömét, a légzés tudatosságát és a belső figyelmet. Minden alkalom egy-egy mese köré épül: lehet, hogy a dzsungelbe indulunk, máskor a mélytenger világát fedezzük fel.
+    </Fragment>
+    <Fragment slot="details">
+      <p><strong>Időpontok: </strong>minden pénteken, ovis csoport: 16:00-17:00, iskolás csoport: 17:15-18:15<br /></p>
+      <p><strong>Időtartam: </strong> 60 perc</p>
+      <p><strong>Helyszín: </strong> Tótágas Mozgás- és Fejlesztő Stúdió, 8230 Balatonfüred, Ady Endre u. 44.</p>
+      <p><strong>Árak: </strong><br />- 5 alkalmas bérlet: 22500 Ft <br />- 10 alkalmas bérlet: 40000 Ft</p>
+    </Fragment>
+  </ActivityModal>
+
+  <ActivityModal id="meseerdo" iconSrc="/img/meseerdo.png" title="MeseErdő séták gyerekeknek">
+    <Fragment slot="description">
+      Nem túra. Találkozás a természettel.
+      A MeseErdő sétán a gyerekek lassítanak, figyelnek, észreveszik a „kicsi csodákat”: a levelek rajzát, a szél hangját, a fény útját. A történetek kapukat nyitnak – ezúttal a természet felé. A séta nem teljesítményről szól, hanem jelenlétről, kíváncsiságról és belső nyugalomról.
+    </Fragment>
+    <Fragment slot="details">
+      <p><strong>Árak: </strong>egyéni árazás programtól függően</p>
+    </Fragment>
+  </ActivityModal>
+
+  <ActivityModal id="rajz" iconSrc="/img/rajz.png" title="Rajzelemzés gyerekeknek">
+    <Fragment slot="description">
+      A gyerekek rajzaiban gyakran olyan érzések, félelmek és vágyak jelennek meg, amelyeket még nem tudnak szavakba önteni.
+      A rajzelemzés segít megérteni a belső világukat, és finom iránymutatást adhat a szülőknek abban, hogyan támogassák őket egy-egy nehezebb élethelyzetben.
+    </Fragment>
+    <Fragment slot="details">
+      <p><strong>Időtartam: </strong>3x60 perc</p>
+      <p><strong>Ár: </strong>45000 Ft</p>
+    </Fragment>
+  </ActivityModal>
+
+  <Fragment slot="scripts">
+    <script>
+      import '../scripts/modal.js';
+    </script>
+  </Fragment>
+</Layout>

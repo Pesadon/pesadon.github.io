@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EventModal from '../components/EventModal.astro';
+import '../styles/pages/calendar.css';
+---
+<Layout title="Aktuális - Mesejó világ" activeNav="aktualis">
+  <main class="main-content">
+    <h1 class="page-title">Aktuális események</h1>
+
+    <div class="calendar-section">
+      <div class="calendar-wrapper" id="calendarWrapper">
+        <div class="calendar-nav">
+          <button class="calendar-nav-btn" id="calPrevBtn" onclick="changeMonth(-1)" aria-label="Előző hónap">‹</button>
+          <span class="calendar-month-title" id="calMonthTitle"></span>
+          <button class="calendar-nav-btn" id="calNextBtn" onclick="changeMonth(1)" aria-label="Következő hónap">›</button>
+        </div>
+
+        <div class="calendar-weekdays">
+          <div class="calendar-weekday">H</div>
+          <div class="calendar-weekday">K</div>
+          <div class="calendar-weekday">Sz</div>
+          <div class="calendar-weekday">Cs</div>
+          <div class="calendar-weekday">P</div>
+          <div class="calendar-weekday">Sz</div>
+          <div class="calendar-weekday">V</div>
+        </div>
+
+        <div class="calendar-grid" id="calGrid"></div>
+
+        <p class="swipe-hint">← csúsztatással lapozhat →</p>
+      </div>
+    </div>
+
+    <EventModal />
+  </main>
+
+  <Fragment slot="scripts">
+    <script>
+      // Module scripts run after the DOM is parsed (like <script defer>),
+      // so the calendar elements above already exist by the time this runs.
+      import { initMonthCalendar } from '../scripts/calendar-month.js';
+      initMonthCalendar();
+    </script>
+  </Fragment>
+</Layout>

@@ -1,0 +1,148 @@
+/* ===== UPCOMING EVENTS STRIP (index.html) ===== */
+.upcoming-strip {
+  width: 90%;
+  max-width: 70rem;
+  margin: 2rem auto 0;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.upcoming-strip-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #6d5200;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(255,255,255,0.3);
+}
+
+.upcoming-strip-cards {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.upcoming-card {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(0.75rem);
+  border: 0.0625rem solid rgba(255,255,255,0.25);
+  border-radius: 1.25rem;
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.06);
+  text-decoration: none;
+}
+
+.upcoming-card:hover {
+  background: rgba(255,242,204,0.75);
+  border-color: rgba(109,82,0,0.35);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.8rem 2rem rgba(109,82,0,0.13);
+}
+
+.upcoming-card-date {
+  flex-shrink: 0;
+  width: 3.4rem;
+  text-align: center;
+  background: rgba(109,82,0,0.08);
+  border-radius: 0.65rem;
+  padding: 0.4rem 0.2rem;
+  border: 0.0625rem solid rgba(109,82,0,0.15);
+}
+
+.upcoming-day {
+  display: block;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #6d5200;
+  line-height: 1;
+}
+
+.upcoming-month {
+  display: block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(109,82,0,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.upcoming-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.upcoming-card-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #6d5200;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upcoming-card-meta {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(109,82,0,0.6);
+  margin-top: 0.15rem;
+}
+
+.upcoming-strip-more {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6d5200;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.upcoming-strip-more:hover {
+  opacity: 1;
+  color: #6d5200;
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+  .upcoming-strip {
+    width: 100%;
+    padding: 0 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .upcoming-strip-title {
+    font-size: 1.8rem;
+  }
+
+  .upcoming-strip-cards {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .upcoming-card {
+    padding: 0.85rem 1rem;
+  }
+
+  .upcoming-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

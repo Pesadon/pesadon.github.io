@@ -4,3 +4,16 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# Dependencies
+node_modules/
+
+# Build output — Cloudflare rebuilds this on every deploy
+dist/
+
+# Astro's internal cache
+.astro/
+
+# Editor/OS junk
+.DS_Store
+.vscode/

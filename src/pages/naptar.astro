@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EventModal from '../components/EventModal.astro';
+import '../styles/pages/calendar.css';
+---
+<Layout title="Naptár - Mesejó világ" activeNav="naptar">
+  <main class="main-content">
+    <h1 class="page-title">Naptár</h1>
+
+    <div class="view-switcher">
+      <button class="view-btn active" id="btnList" onclick="switchView('list')">Lista</button>
+      <button class="view-btn" id="btnMonth" onclick="switchView('month')">Hónap</button>
+      <button class="view-btn" id="btnDay" onclick="switchView('day')">Mai nap</button>
+    </div>
+
+    <div id="viewDay" class="view-panel hidden">
+      <div class="day-view-wrapper">
+        <div class="day-view-date" id="dayViewDate"></div>
+        <div id="dayViewContent"></div>
+      </div>
+    </div>
+
+    <div id="viewMonth" class="view-panel hidden">
+      <div class="calendar-wrapper" id="calendarWrapper">
+        <div class="calendar-nav">
+          <button class="calendar-nav-btn" id="calPrevBtn" onclick="changeMonth(-1)">‹</button>
+          <span class="calendar-month-title" id="calMonthTitle"></span>
+          <button class="calendar-nav-btn" id="calNextBtn" onclick="changeMonth(1)">›</button>
+        </div>
+        <div class="calendar-weekdays">
+          <div class="calendar-weekday">H</div>
+          <div class="calendar-weekday">K</div>
+          <div class="calendar-weekday">Sz</div>
+          <div class="calendar-weekday">Cs</div>
+          <div class="calendar-weekday">P</div>
+          <div class="calendar-weekday">Sz</div>
+          <div class="calendar-weekday">V</div>
+        </div>
+        <div class="calendar-grid" id="calGrid"></div>
+        <p class="swipe-hint">← csúsztatással lapozhat →</p>
+      </div>
+    </div>
+
+    <div id="viewList" class="view-panel">
+      <div class="list-view-wrapper" id="listViewContent"></div>
+    </div>
+  </main>
+
+  <EventModal />
+
+  <Fragment slot="scripts">
+    <script>
+      import { getEventsForDate, getSortedEvents, midnight, MONTHS_HU_GEN, DAYS_HU_LONG } from '../data/events.js';
+      import { initMonthCalendar, openEventModal } from '../scripts/calendar-month.js';
+
+      // ===== VIEW SWITCHING =====
+      function switchView(view) {
+        ['day', 'month', 'list'].forEach((v) => {
+          const panel = document.getElementById('view' + v.charAt(0).toUpperCase() + v.slice(1));
+          const btn = document.getElementById('btn' + v.charAt(0).toUpperCase() + v.slice(1));
+          panel?.classList.toggle('hidden', v !== view);
+          btn?.classList.toggle('active', v === view);
+        });
+      }
+
+      // ===== DAY VIEW =====
+      function renderDayView() {
+        const today = new Date();
+        document.getElementById('dayViewDate').textContent =
+          `${today.getFullYear()}. ${MONTHS_HU_GEN[today.getMonth()]} ${today.getDate()}., ${DAYS_HU_LONG[today.getDay()]}`;
+
+        const events = getEventsForDate(today);
+        const container = document.getElementById('dayViewContent');
+
+        if (events.length === 0) {
+          container.innerHTML = `<div class="day-empty"><span class="day-empty-icon">🌿</span>Ma nincs esemény.</div>`;
+          return;
+        }
+
+        container.innerHTML = events
+          .map(
+            (ev) => `
+          <div class="event-card" onclick="openEventModal('${ev.id}')">
+            <div class="event-card-title">${ev.title}</div>
+            <div class="event-card-meta">🕐 ${ev.time} &nbsp;·&nbsp; 📍 ${ev.location}</div>
+          </div>
+        `
+          )
+          .join('');
+      }
+
+      // ===== LIST VIEW =====
+      function renderListView() {
+        const container = document.getElementById('listViewContent');
+        const today = midnight(new Date());
+        const upcoming = getSortedEvents().filter((ev) => ev._end >= today);
+
+        if (upcoming.length === 0) {
+          container.innerHTML = `<div class="list-empty">Jelenleg nincs közelgő esemény.</div>`;
+          return;
+        }
+
+        container.innerHTML = upcoming
+          .map((ev) => {
+            const s = ev._start;
+            const e = ev._end;
+            const isMultiDay = s.toDateString() !== e.toDateString();
+            const crossMonth = isMultiDay && s.getMonth() !== e.getMonth();
+            const startMon = MONTHS_HU_GEN[s.getMonth()].slice(0, 3) + '.';
+            const endMon = MONTHS_HU_GEN[e.getMonth()].slice(0, 3) + '.';
+            const dayLabel = isMultiDay ? `${s.getDate()}–${e.getDate()}` : `${s.getDate()}`;
+            const monthLabel = crossMonth ? `${startMon}–${endMon}` : startMon;
+
+            return `
+              <div class="list-item" onclick="openEventModal('${ev.id}')">
+                <div class="list-item-date-block">
+                  <div class="list-item-day">${dayLabel}</div>
+                  <div class="list-item-month">${monthLabel}</div>
+                </div>
+                <div class="list-item-body">
+                  <div class="list-item-title">${ev.title}</div>
+                  <div class="list-item-meta">🕐 ${ev.time} &nbsp;·&nbsp; 📍 ${ev.location}</div>
+                </div>
+                <span class="list-item-arrow">›</span>
+              </div>
+            `;
+          })
+          .join('');
+      }
+
+      // ===== INIT =====
+      renderDayView();
+      renderListView();
+      initMonthCalendar(); // renders the month grid + wires modal/swipe
+
+      // Buttons use onclick="switchView('...')" in the markup
+      window.switchView = switchView;
+    </script>
+  </Fragment>
+</Layout>
