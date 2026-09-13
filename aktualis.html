@@ -35,6 +35,7 @@
         </div>
         <a href="#" class="nav-btn active">Aktuális</a>
         <a href="ajandekutalvany.html" class="nav-btn" onclick="toggleMobileMenu()">Ajándékutalvány</a>
+        <a href="naptar.html" class="nav-btn">Naptár</a>
         <a href="rolam.html" class="nav-btn">Rólam</a>
         <a href="erdeklodes.html" class="nav-btn">Kapcsolat</a>
       </div>
@@ -59,17 +60,17 @@
     <main class="main-content">
       <h1 class="page-title">Aktuális események</h1>
 
-      <!-- Calendar Section -->
+      <!-- Calendar Section 
       <div class="calendar-section">
         <div class="calendar-wrapper" id="calendarWrapper">
-          <!-- Month Navigation -->
+          <!- Month Navigation 
           <div class="calendar-nav">
             <button class="calendar-nav-btn" id="calPrevBtn" onclick="changeMonth(-1)" aria-label="Előző hónap">‹</button>
             <span class="calendar-month-title" id="calMonthTitle"></span>
             <button class="calendar-nav-btn" id="calNextBtn" onclick="changeMonth(1)" aria-label="Következő hónap">›</button>
           </div>
 
-          <!-- Weekday Headers -->
+          <!- Weekday Headers
           <div class="calendar-weekdays">
             <div class="calendar-weekday">H</div>
             <div class="calendar-weekday">K</div>
@@ -80,14 +81,14 @@
             <div class="calendar-weekday">V</div>
           </div>
 
-          <!-- Day Grid -->
+          <!- Day Grid
           <div class="calendar-grid" id="calGrid"></div>
 
           <p class="swipe-hint">← csúsztatással lapozhat →</p>
         </div>
       </div>
 
-      <!-- Event Modal -->
+      <!- Event Modal
       <div id="eventModal" class="event-modal">
         <div class="event-modal-content">
           <button class="event-close-btn" onclick="closeEventModal()">×</button>
@@ -97,14 +98,18 @@
           <div class="event-modal-details" id="evModalDetails"></div>
           <a href="#" id="evModalBtn" class="event-modal-btn" target="_blank">Jelentkezés</a>
         </div>
-      </div>
+      </div>-->
 
       <div class="news-container">
         <!-- Aktuális események -->
 
-        <!--<article class="news-block featured-news">
+        <article class="news-block featured-news">
+          <img src="img/osziMeseErdo.jpg" alt="MeseErdő séták" class="w-50 rounded mx-auto d-block">
+        </article>
+
+        <article class="news-block featured-news">
           <img src="img/gyj_general.jpg" alt="Gyerekjóga" class="w-50 rounded mx-auto d-block">
-        </article>-->
+        </article>
     </main>
 
     <footer class="footer">
