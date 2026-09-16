@@ -23,6 +23,15 @@ const EVENTS = [
     signupUrl: "mailto:mesejovilag@gmail.com"
   },
   {
+    id: "mkk-2026-09-26",
+    title: "A mese, amit továbbadsz",
+    startDate: "2026-09-26",
+    time: "14:00-18:00",
+    location: "Veszprém, Arty közösségi tér",
+    description: "Mesekönyvkészítő workshop felnőtteknek",
+    signupUrl: "https://forms.gle/rim6fwqmyqcNq35U7"
+  },
+  {
     id: "meseerdo-2026-10-04",
     title: "MeseErdő séta",
     startDate: "2026-10-04",
