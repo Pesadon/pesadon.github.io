@@ -20,19 +20,16 @@
          If you'd rather keep everything in one shared stylesheet,
          you can move this block into style/index_style.css instead. -->
     <style>
-      .hero-question {
-        font-family: "Dancing Script", cursive;
-        font-size: 2.2rem;
-        color: #6d5200;
-        margin-bottom: 0.5rem;
-      }
-
       .hero-tagline {
         font-family: "Quicksand", sans-serif;
         font-weight: 600;
         font-size: 1.3rem;
         color: #6d5200;
         opacity: 0.85;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero-tagline:last-of-type {
         margin-bottom: 2.25rem;
       }
 
@@ -115,21 +112,6 @@
         margin-left: 3rem;
       }
 
-      .trial-notice {
-        background: rgba(255, 255, 255, 0.35);
-        border: 0.125rem dashed #6d5200;
-        border-radius: 1.25rem;
-        padding: 1.25rem 1.75rem;
-        margin: 0 auto 2.5rem;
-        max-width: 34rem;
-        font-family: "Quicksand", sans-serif;
-        font-weight: 600;
-        font-size: 1.15rem;
-        line-height: 1.6;
-        color: #6d5200;
-        text-align: center;
-      }
-
       .price-note {
         font-family: "Quicksand", sans-serif;
         font-weight: 700;
@@ -157,12 +139,21 @@
         margin-bottom: 0.75rem;
       }
 
+      .buttons-heading {
+        font-family: "Dancing Script", cursive;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #6d5200;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
       @media (max-width: 48rem) {
-        .hero-question { font-size: 1.6rem; }
         .hero-tagline { font-size: 1.05rem; }
         .info-card { padding: 2rem 1.25rem; }
         .info-card-title { font-size: 1.6rem; }
         .closing-tagline { font-size: 1.4rem; }
+        .buttons-heading { font-size: 1.6rem; }
       }
     </style>
   </head>
@@ -214,63 +205,59 @@
     <main class="main-content">
       <div class="content-wrapper">
         <h1 class="main-title">Mesehős Képző</h1>
-        <p class="hero-question">Mit tanulhatunk a mesehősöktől?</p>
         <p class="hero-tagline">7 próba. 7 mesehősi helyzet. Egy saját hősi út.</p>
+        <p class="hero-tagline">6–10 éves gyerekeknek</p>
 
         <div class="hero-image-wrap">
           <img src="img/mhk_landing.jpg" alt="Mesehős Képző" class="hero-image">
         </div>
 
-        <p class="trial-notice">
-          Az október 21-i alkalom nem a hét közül az első, hanem egy külön <strong>próbaalkalom (2000 Ft)</strong>. Utána közösen eldönthetitek, szeretnétek-e végigjárni a teljes, 7 alkalmas hősi utat.
+        <p class="main-text">
+          A mesékben a hősök sem úgy indulnak útnak, hogy mindent tudnak és mindig bátrak. Félnek, hibáznak, elakadnak, segítséget kérnek, újra próbálkoznak, és néha másik utat kell keresniük.
         </p>
 
         <p class="main-text">
-          Van, hogy a gyereked fél elindulni.<br>
-          Van, hogy egy kudarc után gyorsan feladja.<br>
-          Van, hogy nehéz segítséget kérnie, döntést hoznia, vagy elhinnie magáról, hogy képes rá.
+          A Mesehős Képzőben ezeket a mesehősi helyzeteket hozzuk közelebb a gyerekekhez – meséken, játékokon, mozgáson, kihívásokon és saját élményeken keresztül.
         </p>
 
         <p class="main-text">
-          A Mesehős Képzőben ezekkel a mindennapi helyzetekkel találkozunk – meséken, játékokon, mozgáson és saját élményeken keresztül.
+          Nem az a cél, hogy a gyerek mindig bátor legyen, soha ne hibázzon vagy soha ne adja fel.
         </p>
 
+        <p class="main-text">
+          Hanem az, hogy amikor egy nehéz helyzettel találkozik, legyen miből merítenie és legyenek eszközei arra, hogy megpróbálja megoldani.
+        </p>
+
+        <p class="buttons-heading">Ez az én gyerekemnek való.</p>
         <div class="buttons-container">
-          <a href="https://forms.gle/pv5U5bZiLuKBtRM89" class="cta-button">Ez az én gyerekemnek való</a>
+          <a href="https://forms.gle/pv5U5bZiLuKBtRM89" class="cta-button">Elküldöm szerencsét próbálni (0. alkalom)</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform" class="cta-button">Útjára bocsátom a mesehősök útján (7 alkalmas program)</a>
         </div>
 
         <hr class="section-divider">
 
-        <h2 class="section-title">7 próba, amellyel a mindennapokban is találkozhat</h2>
+        <h2 class="section-title">A hét próba</h2>
         <ol class="styled-list">
-          <li><strong>Elindulni akkor is, ha félek</strong>Bátorság, bizonytalanság, önmagamba vetett hit</li>
-          <li><strong>Mihez kezdek, ha nem sikerül?</strong>Kudarc, hiba, újrapróbálás</li>
-          <li><strong>Feladom vagy keresek másik utat?</strong>Kitartás, rugalmasság, kreatív megoldások</li>
-          <li><strong>Egyedül kell mindent megoldanom?</strong>Segítségkérés, segítség elfogadása, együttműködés</li>
-          <li><strong>Miben vagyok én jó?</strong>Saját erősségek, önbizalom, önismeret</li>
-          <li><strong>Hogyan döntsek, amikor nincs könnyű válasz?</strong>Döntés, felelősség</li>
-          <li><strong>Mire vagyok képes, ha végigmegyek az úton?</strong>Összegzés, sikerélmény, saját hősi út</li>
+          <li><strong>Elindulni akkor is, ha félek</strong>Mit tehetek, ha valami új vagy bizonytalan?</li>
+          <li><strong>Mihez kezdek, ha nem sikerül?</strong>Hogyan állok fel egy kudarc után, és merem-e újra megpróbálni?</li>
+          <li><strong>Feladom vagy keresek másik utat?</strong>Mi történik, ha az első próbálkozás nem működik?</li>
+          <li><strong>Egyedül kell mindent megoldanom?</strong>Mikor érdemes segítséget kérni, és hogyan fogadjam el mások segítségét?</li>
+          <li><strong>Miben vagyok én jó?</strong>Milyen erősségeim vannak, és hogyan támaszkodhatok rájuk?</li>
+          <li><strong>Hogyan döntsek, amikor nincs könnyű válasz?</strong>Hogyan mérlegeljek, amikor több lehetőség közül kell választanom?</li>
+          <li><strong>Mire vagyok képes, ha végigmegyek az úton?</strong>Összegzés, visszatekintés és annak felismerése, hogy mennyi mindenre képes vagyok.</li>
         </ol>
 
         <hr class="section-divider">
 
-        <p class="main-text">Nem csak hallgatunk a hősökről. Mi is próbára tesszük magunkat.</p>
+        <h2 class="section-title">Hogyan dolgozunk?</h2>
         <p class="main-text">Minden alkalom egy újabb állomás a hősi úton.</p>
+        <p class="main-text">Mese → helyzet → próba → saját élmény → közös gondolkodás → használható felismerés</p>
         <p class="main-text">
-          Egy mese megmutat egy helyzetet.<br>
-          A gyerekek játékban, mozgásban és kihívásokban saját maguk is megtapasztalják azt.
+          A gyerekek nem csupán hallgatják a mesét: belelépnek a történetbe. Mozognak, játszanak, gondolkodnak, alkotnak, próbálkoznak, és közben saját tapasztalatokat szereznek.
         </p>
-
-        <ul class="styled-sublist">
-          <li>Megpróbálják.</li>
-          <li>Hibáznak.</li>
-          <li>Újrakezdik.</li>
-          <li>Segítséget kérnek.</li>
-          <li>Másik utat keresnek.</li>
-          <li>Döntéseket hoznak.</li>
-        </ul>
-
-        <p class="main-text">Közben pedig a Mesejáró térképen is továbbhaladnak.</p>
+        <p class="main-text">
+          A Mesejáró térkép segít végigkövetni az utat, a próbák pedig lehetőséget adnak arra, hogy a gyerekek játékos helyzetekben tapasztalják meg mindazt, amiről a mese szól.
+        </p>
 
         <hr class="section-divider">
 
@@ -279,76 +266,77 @@
         <p class="main-text">
           Hanem egy saját, életkorának megfelelő hősi eszköztárat, amelyhez később is visszanyúlhat, amikor hasonló helyzettel találkozik.
         </p>
-        <p class="main-text">És közben megtapasztalhatja:</p>
+        <p class="main-text">Például amikor:</p>
 
         <ul class="styled-sublist">
-          <li>„Meg tudom próbálni.”</li>
-          <li>„Ha nem sikerül, próbálhatom másképp.”</li>
-          <li>„Kérhetek segítséget.”</li>
-          <li>„Van, amiben én vagyok jó.”</li>
-          <li>„Képes vagyok dönteni.”</li>
+          <li>fél valami újba belevágni,</li>
+          <li>nem sikerül elsőre, amit szeretne,</li>
+          <li>legszívesebben feladná,</li>
+          <li>nem tudja, kitől kérhetne segítséget,</li>
+          <li>bizonytalan abban, miben jó,</li>
+          <li>vagy nehéz döntés előtt áll.</li>
         </ul>
 
         <hr class="section-divider">
 
-        <h2 class="section-title">A Mesehős Képző útja</h2>
-        <ul class="styled-sublist">
-          <li>Mesejáró térkép</li>
-          <li>Mesék és mesehősök</li>
-          <li>Mozgásos és játékos próbák</li>
-          <li>Kihívások és saját élmények</li>
-          <li>Kreatív feladatok</li>
-          <li>Közös gondolkodás és felismerések</li>
-        </ul>
-        <p class="main-text">
-          A 7 alkalom egymásra épül: a gyerekek nem hét különálló foglalkozáson vesznek részt, hanem végigjárnak egy saját hősi utat.
-        </p>
-
-        <p class="price-note">A teljes, 7 alkalmas program díja: 25 000 Ft</p>
-
-        <hr class="section-divider">
-
-        <h2 class="section-title">Kinek szól?</h2>
-        <p class="main-text">
-          A Mesehős Képzőt olyan 6–10 éves gyerekeknek ajánlom, akiknek jól jöhet, ha játékos, mesés helyzeteken keresztül próbálhatják ki magukat.
-        </p>
-        <p class="main-text">Különösen akkor lehet érdekes, ha a gyermeked:</p>
-        <ul class="styled-sublist">
-          <li>nehezen indul el új helyzetekben;</li>
-          <li>fél a hibázástól vagy a kudarctól;</li>
-          <li>könnyen feladja, ha valami nehéz;</li>
-          <li>nehezen kér segítséget;</li>
-          <li>gyakran bizonytalan abban, hogy mire képes;</li>
-          <li>nehezen hoz döntést;</li>
-          <li>vagy egyszerűen szeretné jobban megismerni a saját erősségeit.</li>
-        </ul>
-
-        <hr class="section-divider">
+        <h2 class="section-title">A program</h2>
+        <p class="main-text"><strong>A 7 alkalom időpontjai</strong></p>
 
         <div class="info-card">
-          <h3 class="info-card-title">Próbaalkalom</h3>
-          <p class="info-card-line">Mesehős Képző · 6–10 éves gyerekeknek</p>
+          <h3 class="info-card-title">0. próbaalkalom</h3>
           <ul class="info-card-list">
             <li>2026. október 21., szerda</li>
             <li>17:00–18:30</li>
             <li>Veszprém</li>
-            <li>2000 Ft</li>
+            <li>Részvételi díj: 2000 Ft</li>
           </ul>
-          <p class="info-card-note">A próbaalkalom után dönthettek, szeretnétek-e végigjárni a teljes, 7 alkalmas utat.</p>
+          <p class="info-card-note">Ez lehetőséget ad arra, hogy a gyermek és a szülő megismerje a Mesehős Képző világát, és utána döntsön a folytatásról.</p>
         </div>
 
+        <p class="buttons-heading">Ez az én gyerekemnek való.</p>
         <div class="buttons-container">
-          <a href="https://forms.gle/pv5U5bZiLuKBtRM89" class="cta-button">Ez az én gyerekemnek való</a>
+          <a href="https://forms.gle/pv5U5bZiLuKBtRM89" class="cta-button">Elküldöm szerencsét próbálni (0. alkalom)</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform" class="cta-button">Útjára bocsátom a mesehősök útján (7 alkalmas program)</a>
         </div>
+
+        <p class="main-text">Ha a próbaalkalom után úgy döntötök, hogy folytatjátok:</p>
+
+        <ul class="styled-sublist">
+          <li>1. próba: november 4.</li>
+          <li>2. próba: november 11.</li>
+          <li>3. próba: november 18.</li>
+          <li>4. próba: november 25.</li>
+          <li>5. próba: december 2.</li>
+          <li>6. próba: december 9.</li>
+          <li>7. próba: december 16.</li>
+        </ul>
+
+        <p class="main-text">Minden alkalom 17:00–18:30 között, Veszprémben.</p>
+
+        <p class="price-note">A teljes 7 alkalmas program díja: 25 000 Ft.</p>
 
         <hr class="section-divider">
 
-        <p class="main-text">Egy út, amelyen nem az a cél, hogy mindig sikerüljön.</p>
-        <p class="closing-tagline">Hanem hogy a gyerek megtapasztalja: mit tud tenni, amikor nem sikerül.</p>
-        <p class="closing-tagline">Induljon el a saját hősi útján!</p>
+        <h2 class="section-title">Kinek lehet különösen jó?</h2>
+        <p class="main-text">Annak a gyereknek, aki…</p>
+        <ul class="styled-sublist">
+          <li>…néha fél elindulni, ha valami új.</li>
+          <li>…könnyen feladja, ha elsőre nem sikerül.</li>
+          <li>…nehezen kér segítséget.</li>
+          <li>…sokszor bizonytalan magában.</li>
+          <li>…nehezen hoz döntést.</li>
+          <li>…vagy egyszerűen szeret meséken keresztül játszva felfedezni és kipróbálni új dolgokat.</li>
+        </ul>
 
+        <hr class="section-divider">
+
+        <p class="closing-tagline">Mert minden mesehősnek vannak próbái.</p>
+        <p class="closing-tagline">És minden gyereknek van saját hősi útja.</p>
+
+        <p class="buttons-heading">Ez az én gyerekemnek való.</p>
         <div class="buttons-container">
-          <a href="https://forms.gle/pv5U5bZiLuKBtRM89" class="cta-button">Jelentkezem a 0. próbaalkalomra – 2 000 Ft</a>
+          <a href="https://forms.gle/pv5U5bZiLuKBtRM89" class="cta-button">Elküldöm szerencsét próbálni (0. alkalom)</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform" class="cta-button">Útjára bocsátom a mesehősök útján (7 alkalmas program)</a>
         </div>
       </div>
     </main>

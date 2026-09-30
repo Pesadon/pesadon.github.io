@@ -50,6 +50,33 @@ const EVENTS = [
     signupUrl: "https://forms.gle/bZgSPZpJRoxL9NMg7"
   },
   {
+    id: "mhk-2026-10-21",
+    title: "Mesehős Képző 0. próbaalkalom",
+    startDate: "2026-10-21",
+    time: "17:00-18:30",
+    location: "Veszprém",
+    description: "Meséken, játékokon, mozgáson és saját élményeken keresztül a mindennapok kihívásaihoz",
+    signupUrl: "https://forms.gle/pv5U5bZiLuKBtRM89"
+  },
+  {
+    id: "mhk-2026-11-04",
+    title: "Mesehős Képző 1. próba",
+    startDate: "2026-11-04",
+    time: "17:00-18:30",
+    location: "Veszprém",
+    description: "Meséken, játékokon, mozgáson és saját élményeken keresztül a mindennapok kihívásaihoz",
+    signupUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform"
+  },
+  {
+    id: "mhk-2026-11-11",
+    title: "Mesehős Képző 2. próba",
+    startDate: "2026-11-11",
+    time: "17:00-18:30",
+    location: "Veszprém",
+    description: "Meséken, játékokon, mozgáson és saját élményeken keresztül a mindennapok kihívásaihoz",
+    signupUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform"
+  },
+  {
     id: "meseerdo-2026-11-15",
     title: "MeseErdő séta",
     startDate: "2026-11-15",
@@ -57,6 +84,51 @@ const EVENTS = [
     location: "Veszprém",
     description: "Mesék, játékok és felfedezés a természetben.",
     signupUrl: "https://forms.gle/bZgSPZpJRoxL9NMg7"
+  },
+  {
+    id: "mhk-2026-11-18",
+    title: "Mesehős Képző 3. próba",
+    startDate: "2026-11-18",
+    time: "17:00-18:30",
+    location: "Veszprém",
+    description: "Meséken, játékokon, mozgáson és saját élményeken keresztül a mindennapok kihívásaihoz",
+    signupUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform"
+  },
+  {
+    id: "mhk-2026-11-25",
+    title: "Mesehős Képző 4. próba",
+    startDate: "2026-11-25",
+    time: "17:00-18:30",
+    location: "Veszprém",
+    description: "Meséken, játékokon, mozgáson és saját élményeken keresztül a mindennapok kihívásaihoz",
+    signupUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform"
+  },
+  {
+    id: "mhk-2026-12-02",
+    title: "Mesehős Képző 5. próba",
+    startDate: "2026-12-02",
+    time: "17:00-18:30",
+    location: "Veszprém",
+    description: "Meséken, játékokon, mozgáson és saját élményeken keresztül a mindennapok kihívásaihoz",
+    signupUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform"
+  },
+  {
+    id: "mhk-2026-12-09",
+    title: "Mesehős Képző 6. próba",
+    startDate: "2026-12-09",
+    time: "17:00-18:30",
+    location: "Veszprém",
+    description: "Meséken, játékokon, mozgáson és saját élményeken keresztül a mindennapok kihívásaihoz",
+    signupUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform"
+  },
+  {
+    id: "mhk-2026-12-16",
+    title: "Mesehős Képző 7. próba",
+    startDate: "2026-12-16",
+    time: "17:00-18:30",
+    location: "Veszprém",
+    description: "Meséken, játékokon, mozgáson és saját élményeken keresztül a mindennapok kihívásaihoz",
+    signupUrl: "https://docs.google.com/forms/d/e/1FAIpQLSffUslDxTEXoLgN_lPS-VKOaOSImpWZ8tML9OD13rWI39NQIQ/viewform"
   }
 ];
 
