@@ -49,7 +49,7 @@ function renderDayView() {
 
 // ===== MONTH VIEW =====
 const START_YEAR      = 2026;
-const START_MONTH     = 4; // May (0-indexed)
+const START_MONTH     = 9; // September (0-indexed)
 const MAX_MONTHS_AHEAD = 11;
 let currentMonthOffset = 0;
 
